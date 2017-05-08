@@ -14,18 +14,9 @@ let jquery = jQuery;
 jQuery.noConflict(true);
 let $ = jquery;
 
-const ICON = 'https://share.dmhy.org/favicon.ico';
 const DMHY_URL_PATTERN = /^https?:\/\/share.dmhy.org\/topics\/view\/\w+\.html$/;
 
-$().ready(() => {
-  // add button
-  $('<div id="toolbar-separator">').appendTo('#toolbar');
-  let $btn = $('<div id="toolbar-dmhy" title="Add from dmhy.org">');
-  $btn.css('background', `url('${ICON}') center no-repeat`);
-  $btn.css('background-size', '25px 25px');
-  $btn.appendTo('#toolbar');
-  $btn.click(dmhyButtonClicked);
-  
+$().ready(function() {
   function uploadTorrentFile(confirmed) {
     const args = cloneInto([confirmed], unsafeWindow);
     if (!confirmed)
@@ -39,16 +30,6 @@ $().ready(() => {
   unsafeWindow.transmission.uploadTorrentFile = exportFunction(uploadTorrentFile, unsafeWindow);
 });
 
-
-
-function dmhyButtonClicked() {
-  let threadUrl = prompt("Please type thread URL", "");
-  if (threadUrl == null)
-    return;
-  torrentFromDmhyThread(threadUrl, (torrentUrl) => {
-    fetchAsBase64(torrentUrl, uploadTorrentFileBase64);
-  });
-}
 
 function torrentFromDmhyThread(threadUrl, callback) {
   GM_xmlhttpRequest({
