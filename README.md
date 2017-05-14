@@ -1,5 +1,8 @@
 # User Scripts
-Collections of user scripts for my personal usage.
+Collection of user scripts for my personal use.
 Provide without any warranty.
 
-All scripts are only tested on Firefox with Greasemonkey add-ons.
+Scripts are organized into folders by website, with their own readmes.
+Expect Bangumi's, which is in [here](https://github.com/bangumi/scripts/tree/master/imorz).
+
+Most scripts are only tested on Firefox with Greasemonkey add-ons.
