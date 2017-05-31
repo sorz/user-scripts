@@ -2,7 +2,7 @@
 // @name        Echo HTML5 player
 // @namespace   org.sorz.lab.unimelb.echo
 // @include     https://content.lecture.unimelb.edu.au/ess/echo/presentation/*
-// @version     1
+// @version     1.1
 // @grant       GM_addStyle
 // @require     http://code.jquery.com/jquery-3.1.1.min.js
 // ==/UserScript==
@@ -15,8 +15,8 @@ GM_addStyle(`
 
 unsafeWindow.stopCounting = true;
 let link = $('a').attr('href');
-$('body > div').append(`
-<video autoplay controls>
+$('body > div').prepend(`
+<video controls>
   <source src="${link}" type="video/mp4">
 </video>
 `);
