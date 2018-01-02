@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Highlight high points post for HN
 // @namespace   org.sorz.lab.hn
-// @include     /^https://news.ycombinator.com/news(\?p=\d+)?$/
+// @include     /^https://news.ycombinator.com/(news)?(\?p=\d+)?$/
 // @version     1
 // @grant       none
 // @require     https://code.jquery.com/jquery-2.1.4.min.js
