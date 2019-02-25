@@ -2,7 +2,8 @@
 // @name        Highlight high points post for HN
 // @namespace   org.sorz.lab.hn
 // @include     /^https://news.ycombinator.com/(news)?(\?p=\d+)?$/
-// @version     4
+// @include     /^https://news.ycombinator.com/front?(\?day=[\d\-]+)?$/
+// @version     5
 // @grant       none
 // ==/UserScript==
 
