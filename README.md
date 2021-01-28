@@ -5,4 +5,4 @@ Provide without any warranty.
 Scripts are organized into folders by website, with their own readmes.
 Expect Bangumi's, which is in [here](https://github.com/bangumi/scripts/tree/master/imorz).
 
-Most scripts are only tested on Firefox with Greasemonkey add-ons.
+Most scripts are only tested on Firefox with Violentmonkey add-ons.
